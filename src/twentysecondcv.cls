@@ -6,7 +6,7 @@
 % License: MIT
 %
 % For further information please visit:
-% https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex
+% https://github.com/yipengh/cv/blob/master/LICENSE
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,8 +20,8 @@
 %%%%%%%%%%%%
 % PACKAGES %
 %%%%%%%%%%%%
+\RequirePackage[quiet]{fontspec}
 \RequirePackage[sfdefault]{ClearSans}
-\RequirePackage[T1]{fontenc}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -33,40 +33,68 @@
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
 
-%%%%%%%%%%%
-% OPTIONS %
-%%%%%%%%%%%
-% icons
-\newbool{icon}
-\DeclareOption{icon}{%
-  \booltrue{icon}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+\RequirePackage[hidelinks]{hyperref}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
 }
-\DeclareOption{print}{\def\@cv@print{}}
+
 \DeclareOption*{
   \PassOptionsToClass{\CurrentOption}{article}
 }
 \ProcessOptions\relax
-\ifbool{icon}{\RequirePackage{fontawesome}}{}
 
-\usetikzlibrary{calc}
+\ifxetex
+  \usepackage{letltxmacro}
+  \setlength{\XeTeXLinkMargin}{1pt}
+  \LetLtxMacro\SavedIncludeGraphics\includegraphics
+  \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+    \IncludeGraphicsAux{#1}%
+  }%
+  \newcommand*{\IncludeGraphicsAux}[2]{%
+    \XeTeXLinkBox{%
+      \SavedIncludeGraphics#1{#2}%
+    }%
+  }%
+\fi
 
 %%%%%%%%%%
 % colors %
 %%%%%%%%%%
 \definecolor{white}{RGB}{255,255,255} 
-\definecolor{darkgray}{HTML}{333333} 
+\definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{sidecolor}{HTML}{E7E7E7}
 \definecolor{lightgray}{HTML}{999999}
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
 \definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB0B00}
+\definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 \definecolor{mainblue}{HTML}{0E5484}
 \definecolor{cerulean}{HTML}{007BA7}
 \definecolor{maingray}{HTML}{B9B9B9}
 \definecolor{maindarkgray}{HTML}{B3B3B3}
+\definecolor{pblue}{HTML}{0395DE}
+\definecolor{gray}{HTML}{4D4D4D}
+\definecolor{materialpurple}{HTML}{9C27B0}
+\definecolor{materialindigo}{HTML}{3F51B5}
+\definecolor{materialblue}{HTML}{2196F3}
+\definecolor{materialcyan}{HTML}{00BCD4}
+\definecolor{materialteal}{HTML}{009688}
+\definecolor{materialgreen}{HTML}{4CAF50}
+\definecolor{materiallime}{HTML}{CDDC39}
+\definecolor{materialamber}{HTML}{FFC107}
+\definecolor{materialbrown}{HTML}{795548}
+\definecolor{materialred}{HTML}{FF4436}
+\definecolor{materialorange}{HTML}{FF5722}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -75,206 +103,197 @@
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
   \colorlet{fillheader}{white}
-  \colorlet{asidecolor}{sidecolor}
   \colorlet{header}{gray}
 \else
-  \colorlet{fillheader}{gray}
-  \colorlet{header}{white}
-  \colorlet{asidecolor}{sidecolor}
+  \colorlet{fillheader}{white}
+  \colorlet{header}{gray}
 \fi
 
 \colorlet{textcolor}{gray}
 \colorlet{headercolor}{gray}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-% Profile left SideBar %
-%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{1cm}
+%%%%%%%%%%%%%%%%%%%%%%%
+%	MISC CONFIGURATIONS %
+%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty} % Disable headers and footers
+\setlength{\parindent}{0pt} % Disable paragraph indentation
 
-% compute size of profile picture
-\newcommand{\imsize}{\linewidth}
+%%%%%%%%%
+% FONTS %
+%%%%%%%%%
+\newfontfamily\headingfont[Path = fonts/]{segoeuib.ttf}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%	SIDEBAR DEFINITIONS %
+%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\TPHorizModule}{1cm} % Left margin
+\setlength{\TPVertModule}{1cm} % Top margin
+
 \newlength\imagewidth
 \newlength\imagescale
-\renewcommand{\imsize}{0.618\linewidth}
-\pgfmathsetlength{\imagewidth}{5cm}%
-\pgfmathsetlength{\imagescale}{\imagewidth/600}%
+\pgfmathsetlength{\imagewidth}{5cm}
+\pgfmathsetlength{\imagescale}{\imagewidth/600}
 
-\newcommand{\profilesection}[2]{{\noindent\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt} \vspace{1pt}}}
+\newcommand{\profilesection}[2]{\vspace{8pt}{\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
-\newcommand{\cvdate}[1]{\renewcommand{\givencvdate}{#1}}                % date
-\newcommand{\cvmail}[1]{\renewcommand{\givencvmail}{#1}}                % mail
-\newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}    % phone
-\newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}          % address
-\newcommand{\cvsite}[1]{\renewcommand{\givencvsite}{#1}}                % site
-\newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{  \justifying#1}} % about me
-\newcommand{\profilepic}[1]{\renewcommand{\givenprofilepic}{#1}}        % picture
-\newcommand{\cvname}[1]{\renewcommand{\givencvname}{#1}}                % name
-\newcommand{\cvjobtitle}[1]{\renewcommand{\givencvjobtitle}{#1}}        % job title
+% Define custom commands for CV info
+\newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
+\newcommand{\cvweixin}[1]{\renewcommand{\cvweixin}{#1}}
+\newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
+\newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
+\newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
+\newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
+\newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
+\newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
+\newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
+\newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
+\newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
 
-\newcommand{\givencvname}{REQUIRED!} % name
-\newcommand{\givencvdate}{}          % date
-\newcommand{\givencvmail}{}          % mail
-\newcommand{\givennumberphone}{}     % phone
-\newcommand{\givencvaddress}{}       % address
-\newcommand{\givenaboutme}{}         % about me
-\newcommand{\givenprofilepic}{}      % picture
-\newcommand{\givencvsite}{}          % site
-\newcommand{\givencvjobtitle}{}      % job title
+% Command for printing the contact information icons
+\newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
-% icon in blue circle; #1 -> icon
-\newcommand*\icon[1]{\tikz[baseline=(char.base)]{
-  \node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}
-}
-
-% Text in square node with rounded corners; #1 -> text, #2 -> color
-\newcommand*\round[2]{%
-\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle,
-  rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm,
-  fill=#2,#2,text=white](char){#1};%
-}
-
-% skill bar graphs
+% Command for printing skill progress bars
 \newcommand\skills[1]{
-  \renewcommand{\givenskill}{
-    \noindent
+	\renewcommand{\skills}{
     \begin{tikzpicture}
-    \foreach [count=\i] \x/\y in {#1}
-    {
-      \draw[fill=maingray,maingray] (0,-\i) rectangle (6,-\i+0.4);
-      \draw[fill=white,mainblue](0,-\i) rectangle (1.2*\y,-\i+0.4);
-      \node [above right ] at (0,-\i+0.4) {\x};
-      \foreach \z in {0,1,2,...,10}
-      {
-        \coordinate (A\z) at ($(0,-\i)+(1.2*\z*0.5cm,0)$) {};
-        \ifodd\z
-            \draw[white] ($(A\z)$) -- ($(A\z)+(0,2.5pt)$);
-        \else
-            \draw[white] ($(A\z)$) -- ($(A\z)+(0,5pt)$);
-        \fi
-      }
+			\foreach [count=\i] \x/\y in {#1}{
+				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.25);
+				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.25);
+				\node [above right] at (0,\i+0.25) {\x};
     }
     \end{tikzpicture}
   }
 }
 
-% text style skills
-\newcommand{\givenskill}{}
-  \newcommand\skillstext[1]{
-    \renewcommand{\giventextskill}{
-    \begin{flushleft}
-    \noindent
-    \foreach [count=\i] \x/\y in {#1}
-    {
-      \x$ \star $\y
-    }
-    \end{flushleft}
-  }
-}
+%%%%%%%%%%%%%%%%%%
+% SIDEBAR LAYOUT %
+%%%%%%%%%%%%%%%%%%
 
-\newcommand{\giventextskill}{}
-
-\newcommand{\makeprofile}
-{
-  % grey bar on the left side
+\newcommand{\makeprofile}{
   \begin{tikzpicture}[remember picture,overlay]
-      \node [rectangle, fill=asidecolor, anchor=north, minimum width=9.90cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+      \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
   \end{tikzpicture}
 
+  %------------------------------------------------
+
   \begin{textblock}{6}(0.5, 0.2)
-    \begin{flushleft}
-      \hspace{13pt}
 
-      % profile picture
-      \ifthenelse{\equal{\givenprofilepic}{}}{}{\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-          \clip (600/2, 567/2) circle (567/2);
-          \node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\givenprofilepic}};
-      \end{tikzpicture}}
+  	\vspace{2mm}
+  	\begin{center}
+  	\tikz\node[circle,draw,
+           text=white,
+           path picture={
+               \node at (path picture bounding box.center){
+                   \includegraphics[scale=0.25]{img/avatar4.png}
+               };
+           }]{~~~~~~~~~~~~~~~~~~~~~~~~};
+    \end{center}
 
-      % name
-      {\Huge\color{mainblue}\givencvname}
+    %------------------------------------------------
 
-      % jobtitle
-      \begin{flushright}
-        {\Large\color{black!80}\givencvjobtitle}
-      \end{flushright}
-      \renewcommand{\arraystretch}{1.6}
+    \vspace{1mm}
+    \begin{center}
+    {\Huge\color{pblue}\cvname}
 
-      % table with icons 
-      \begin{tabular}{c @{\hskip 0.2cm} p{5cm}}
-        % CV date
-        \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
-        % CV address
-        \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
-        % CV phone
-        \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
-        % CV site
-        \ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
-        % CV mail
-        \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}}
+    %------------------------------------------------
+    
+    {\Large\color{black!80}\cvjobtitle}
+    \end{center}
+
+    %------------------------------------------------
+    
+    \vspace{1mm}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{p{1cm} @{\hskip 0.2cm}p{5cm}}
+      \ifthenelse{\equal{\cvdate}{}}{}{
+            生日：
+            &
+            \cvdate \\
+      }
+      \ifthenelse{\equal{\cvnumberphone}{}}{}{
+            手机：
+            &
+            \cvnumberphone \\
+      }
+      \ifthenelse{\equal{\cvmail}{}}{}{
+            电邮：
+            &
+            \href{mailto:\cvmail}{\cvmail} \\
+      }
+      \ifthenelse{\equal{\cvlinkedin}{}}{}{
+            领英：
+            &
+            \href{\cvlinkedin}{\hspace{1mm}/huangyipeng} \\
+      }
+      \ifthenelse{\equal{\cvweixin}{}}{}{
+            微信：
+            & \cvweixin \\
+      }
       \end{tabular}
 
-      % about me text
-      \profilesection{About me}{3.2cm}
-      \givenaboutme
+    %------------------------------------------------
+        \vspace{-0.2cm}
+        \profilesection{职业技能}{3cm}
+        
+        \skills
+        
+        PHP \textbullet{} Java \textbullet{} C/C++ \textbullet{} PL/SQL \\
+        Python \textbullet{} Node.js \textbullet{} Bash \\
+        GraphQL \textbullet{} JSON \textbullet{} YAML \textbullet{} XML \\
+        Maven \textbullet{} Gradle \textbullet{} Webpack \textbullet{} Gulp.js \\
+        Linux \textbullet{} Git \textbullet{} Docker \textbullet{} DevOps \textbullet{} FinOps \\
+        GitLab-ci \textbullet{} Jenkins \textbullet{} Jira \\
+        移动应用开发 \textbullet{} 测试 \textbullet{} 运维 \textbullet{} 云计算 \\
+        线性规划 \textbullet{} 启发式算法 \textbullet{} 元启发式算法 \\
+        
+    %------------------------------------------------
+    \vspace{-0.2cm}
+    \profilesection{语言能力}{3cm} 
+    \begin{figure}
+      \renewcommand{\arraystretch}{0.8}
+      $\vcenter{\hbox{\includegraphics[scale=0.25]{img/english.png}}}$ $\vcenter{\hbox{英语流利（BULATS C1）}}$ \\
+      $\vcenter{\hbox{\includegraphics[scale=0.25]{img/french.png}}}$ $\vcenter{\hbox{法语流利（DALF C1）}}$ \\
+		\end{figure}
+		
+		%------------------------------------------------
+    \vspace{-0.2cm}
+    \profilesection{个人评价}{3cm}
+    \vspace{-0.5cm}
+    \begin{section}
+    ~责任心强 \textbullet{} 专注 \textbullet{} 热爱钻研 \textbullet{} 自主 \\
+    ~期待挑战 \textbullet{} 沟通积极 \textbullet{} 追求创新 
+    \end{section}
 
-      % skills with scale
-      \profilesection{Skill}{5cm}
-      \givenskill
-      \giventextskill
-      \noindent
-      \scriptsize
-      \noindent
-      (*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
-
-    \end{flushleft}
   \end{textblock}
-  \vspace{-10pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%
 % Section Color box %
 %%%%%%%%%%%%%%%%%%%%%
-\newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{
-  {%
-  % Switch between blue and gray
-   \round{#1#2#3}{%
-      \ifodd\value{colorCounter}%
-        mainblue%
-      \else%
-        maingray%
-      \fi%
-    }%
-  }%
-  \stepcounter{colorCounter}%
+% Command to create the rounded boxes around the first three letters of section titles
+\newcommand*\round[2]{%
+	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
 }
 
-\renewcommand{\section}[1]{
-  \par%
+\def\@sectioncolor#1#2{%
   {%
-    \LARGE 
-    \color{headercolor}%
+		\color{pblue} #1#2%
+    }%
+}
+
+
+\renewcommand{\section}[1]{
+  \par\vspace{\parskip}
+  {%
+		\LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
   \par\vspace{\parskip}
 }
 
-\newcommand{\sectionicon}[2]{
-  \par%
-  {%
-    \LARGE 
-    #1 
-    \color{headercolor}%
-    \@sectioncolor #2%
-  }
-  \par\vspace{\parskip}
-}
-
 \renewcommand{\subsection}[1]{
-  \par\vspace{.5\parskip}%
-  {%
-  \large\color{headercolor} #1%
+	\par\vspace{.5\parskip}{%
+		\Large\headingfont\color{headercolor} #1%
   }
   \par\vspace{.25\parskip}%
 }
@@ -290,62 +309,54 @@
 }{%
   \end{tabular*}
 }
-\renewcommand{\bfseries}{\color{headercolor}}
-\newcommand{\twentyitem}[4]{%
-  \hspace{5pt}#1&\parbox[t]{11.5cm}{%
-    \textbf{#2}%
-    \hfill%
-    {\footnotesize#3}\\%
-    #4\vspace{\parsep}%
-  }\\%
+
+\newcommand{\twentyitem}[5]{%
+	\parbox[t]{0.16\textwidth}{#1} & \parbox[t]{0.83\textwidth}{%
+		\textbf{#2} @ #3 \\ 
+        \ifblank{#4}{}{#4 \\}
+		#5\vspace{\parsep}%
+	}\\
+	\vspace{1mm}
 }
-\setlength{\tabcolsep}{0pt}
-\newenvironment{twentyicon}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
-  \end{tabular*}
-}
-\renewcommand{\bfseries}{\color{headercolor}}
-\newcommand{\twentyitemicon}[5]{%
- \hspace{3pt}\faicon{#1}\hspace{2pt}#2&\parbox[t]{11.2cm}{%
-    \textbf{#3}%
-    \hfill%
-    {\footnotesize#4}\\%
+
+% New environment for fluid long list filling parent hspace
+\newenvironment{twentyfluid}{}{}
+
+\newcommand{\twentyitemfluid}[5]{%
+  \underline{#1 : \textbf{#2} @ #3} \\
+  \ifblank{#4}{}{#4 \\}
     #5\vspace{\parsep}%
-  }\\%
+}
+
+\usepackage{tcolorbox}
+\newtcbox{\klabel}[1][mainblue]{
+  on line,
+  arc=4pt,
+  colback=#1!10!white,
+  colframe=#1!50!black,
+  before upper={\rule[-3pt]{0pt}{10pt}},
+  boxrule=1pt,
+  boxsep=0pt,
+  left=4pt,
+  right=4pt,
+  top=2pt,
+  bottom=2pt
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Small twenty List environment %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\tabcolsep}{0pt}
+
+% New environment for the small list
 \newenvironment{twentyshort}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
   \end{tabular*}
 }
-\renewcommand{\bfseries}{\color{headercolor}}
-\newcommand{\twentyitemshort}[2]{%
-  \hspace{5pt}#1&\parbox[t]{11.5cm}{%
-    \textbf{#2}%
-  }\\%
-}
-\setlength{\tabcolsep}{0pt}
-\newenvironment{twentyshorticon}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
-  \end{tabular*}
-}
-\renewcommand{\bfseries}{\color{headercolor}}
-\newcommand{\twentyitemshorticon}[3]{%
-  \hspace{3pt}\faicon{#1}\hspace{3pt}#2&
-      \parbox[t]{11.5cm}{%
-    \textbf{#3}%
-  }\\%
-}
 
-%%%%%%%%%%%%%%%%
-% Page Setting %
-%%%%%%%%%%%%%%%%
-\RequirePackage[left=7.3cm,top=0.1cm,right=0.5cm,bottom=0.2cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\newcommand{\twentyitemshort}[2]{%
+	#1&\parbox[t]{0.83\textwidth}{%
+		#2%
+	}\\
+}
