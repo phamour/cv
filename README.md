@@ -2,17 +2,6 @@ Twenty Seconds Curriculum Vitae in LaTex
 ========================================
 
 [![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg)](https://www.latex-project.org/) 
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) 
-[![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/graphs/commit-activity) 
-[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/issues/) 
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/Naereen/StrapDown.js.svg)](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/issues?q=is%3Aissue+is%3Aclosed)
-
-[![Donate](https://img.shields.io/badge/PayPal-Donate%20to%20Author-blue.svg)](https://www.paypal.me/CarmineSpagnuolo) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/issues)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Download%20and%20use%20the%20Twenty%20Seconds%20Curriculum%20Vitae%20in%20LaTex&url=https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex&hashtags=curriculum,resume,templates,cv,latex,interview,résumé) 
-
-[![Overleaf](https://img.shields.io/badge/Available-Overleaf-green?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABfVBMVEUAAABIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDxIrDwAAAAcciVhAAAAfXRSTlMAAA8mNj9EQz0yIQhVz+71+/79+fPrZU3k96yDmo36wQEos1pWyR+9tSrjwjkSoF9Fezo3jPZQSm6Til0RmR4Qiysk8YFcDe30kdO8aCPygkwpCtkU3QXwnxu2WXw4R3MM7FRICxZTUQPaBAfnqBXVE2MYZNvEtIQX+MU7S/Pc0IMAAAABYktHRACIBR1IAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AEPESoxB1PPhwAAAX1JREFUOMutUldbwkAQ3At2UQJiiQ1FxYaoaGyo2Dt27Nh7FxuK89+9iH4muTz5uS/J3czuzO4t0f8GY0SSLS09IzMrOyeXmIAT2fPyHbITcBW4C4vECsUl+A4FKDVXYKzsBy6vqISnSsivTqHemto6XsLHBAP1GtwgNTZp32qLHvh1s78l8FWm1aKFNqCdgooGOzpIFOiEGiR7V3dPb1+o3yJ/AG5psIBnD4QtZzgEDI+MfsmrYyR2yPXHJ6DmT05plGlxxDOYJe+cLSxFQvOcsWC2UAwsLkU0Z4yWV/iUVk2EKEBrKeecsQ5sGNvYVLCl09vmIsYCfhk7Okc5biBmIOy6sKc77h8AhwbCkQsB3fGYE+wGQkyGQyfh4xJBA+FEBU5/bZ9xk+dGlx7g4vLncHUN3Jhe65bnrFxqO81Y7h1f2XvzqLVtjD7EieKPT/y3j5n3lZ6hixer9379xReICfvCaySeFdnplN/eE+I6pRgUTy5+JBNkjf89PgFCeG27lghtGAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0wMS0xNVQxNzo0Mjo0OSswMzowMHG2UKkAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDEtMTVUMTc6NDI6NDkrMDM6MDAA6+gVAAAAAElFTkSuQmCC)](https://www.overleaf.com/latex/templates/twenty-seconds-curriculum-vitae/kfgsngtymkfj)
 
 ### HOT!
 
@@ -42,47 +31,6 @@ Twenty Seconds Curriculum Vitae in LaTex
     {description}
 \end{twentyshorticon}
 ```
-
-
-# Curricula Vitae - Résumés
-A curriculum vitae, otherwise known as a CV or résumé, is a document used by individuals to communicate their work history, education and skill set. This is a style template for your curriculum written in LaTex. The main goal of this template is to provide a curriculum that is able to survive the résumés screening of "twenty seconds".
-
-_The author assumes no responsibility for the topicality, correctness, completeness or quality of the information provided and for the obtained résumés._
-
-This is designed for computer scientists but there is no limitation to use it for résumés in other disciplines.
-
-### If you like this curriculum, please don't forget to leave a star, to help the development and improvement.
-
-## The basic idea is KISS - Keep It Simple, Stupid.
-
-In a nutshell _**"It is vain to do with more what can be done with fewer"**_ -- Occam's razor --
-
-* **This template has been designed to create a "one-page" résumé and is therefore not suitable to create a curriculum of more than one-page.** 
-
-* _Please do not try to create a curriculum with more than one-page._ 
-
-### How to describe your experiences?
-
-There are many theories about the résumé screening process of "Big" companies.
-Resume screeners and the interviewers look in your résumé for:
-
-- Are you smart?
-- Can you code (act for what you apply)?
-
-Anyway according to the guidelines of this template you should use a really simple form to describe each item in your résumé: 
-
-	Accomplished <X> by implementing <Y> which led to <Z>
-
-Here's an example:
-	
-	Reduced object rendering time by 75% by applying Floyd's algorithm, leading to a 10% reduction in system boot time.
-	
--- _Cracking the Coding Interview, Book, Gayle Laakmann Mcdowell_ --
-
-## Toy Résumé with Fontawesome Icons (document class option _icon_)
-***
-![sample résumé](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex/raw/master/Twenty-Seconds_cv_icons.jpg)
-***
 
 # Build 
 This guide will walk you through building your résumé.
