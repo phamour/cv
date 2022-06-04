@@ -1,0 +1,369 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Original author: Carmine Spagnuolo
+% Major modification and personalization: Yipeng Huang
+%
+% License: MIT
+%
+% For further information please visit:
+% https://github.com/yipengh/cv/blob/master/LICENSE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\usepackage{xeCJK}
+\setCJKmainfont[Colour=black,Path=assets/fonts/,Extension=.ttf,UprightFont=msyh,BoldFont=msyhbd]{msyh}
+\usepackage{enumitem}
+\setlist{noitemsep}
+
+\usepackage{geometry}
+\geometry{
+    left=7.6cm,
+    top=0.1cm,
+    right=1cm,
+    bottom=0.1cm,
+    nohead,
+    nofoot,
+}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\cvname{黄亦芃}
+\cvjobtitle{博士研究生}
+
+\cvdate{1990年6月 (32岁)}
+\cvweixin{mrstrlc}
+\cvnumberphone{130 5144 8927}
+\cvmail{huang.yipeng@hotmail.com}
+\cvlinkedin{https://www.linkedin.com/in/huangyipeng/}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+\skills{{项目管理/4},{文档能力/4},{移动应用/4.5},{Web后端/5.5},{应用架构/4.5},{图论|地图|地理信息系统（GIS）/5},{数据库（SQL|NoSQL）/5.2},{数据结构与算法/5.2},{运筹学|组合优化/5}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%    求职意向
+%----------------------------------------------------------------------------------------
+\vspace{-0.2cm}
+\section{求职意向：云原生应用架构师}
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+\vspace{-0.2cm}
+\section{教育背景}
+
+\begin{twenty}
+	\twentyitem
+    	{2015.03 - \\ 2018.06}
+        {博士研究生, 工业系统优化}
+        {\href{http://losi.utt.fr/en/index.html}{ICD-LOSI 特鲁瓦技术大学}}
+        {特鲁瓦, 法国}
+        {\textbullet{} 运筹优化，图论，地理信息系统，软件工程，决策支持}
+	\twentyitem
+    	{2013.09 - \\ 2014.10}
+        {硕士研究生, 工业系统优化}
+        {\href{http://www.utt.fr/en/index.html}{特鲁瓦技术大学}}
+        {特鲁瓦, 法国}
+        {\textbullet{} 车辆路径问题，运筹优化，生产排程，社交网络数据挖掘}
+        {\vspace{-0.3cm}}
+    \twentyitem
+    	{2009.02 - \\ 2014.10}
+        {工程师学位, 计算机科学与信息系统}
+        {\href{http://www.utt.fr/en/index.html}{特鲁瓦技术大学}}
+        {特鲁瓦, 法国}
+        {\textbullet{} 专业方向：软件工程 \\
+        \textbullet{} 专业课程：C语言，算法设计，信息系统设计，Web编程，Java，设计模式，图论，Linux，PL/SQL，Web Services，软件质量管理\vspace{0.3cm}}
+    \twentyitem
+        {2008.08 - \\ 2009.02}
+        {法国工程师项目法语培训}
+        {\href{http://www.cscdf.org/}{留学基金委-东方国际教育交流中心}}
+        {北京, 中国}
+        {\vspace{-0.3cm}}
+    \twentyitem
+        {2005.09 - \\ 2008.07}
+        {高中学历}
+        {\href{https://baike.baidu.com/item/首都师范大学附属中学}{首都师范大学附属中学}}
+        {北京, 中国}
+        {\vspace{-0.6cm}}
+	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{-0.6cm}
+\section{工作经历}
+
+\begin{twentyfluid}
+    \twentyitemfluid
+   		{2018.09 - 2020.07}
+        {信息技术咨询顾问}
+        {\href{https://www.cgi.fr/fr-fr}{CGI集团（法国）公司}}
+        {\\ \klabel{应用架构} \klabel{地理信息系统} \klabel{数据库编程} \klabel{重构} \klabel{敏捷开发}}
+        {
+        {
+        \\
+        本部工作：
+        \begin{itemize}
+        	\item 主导浸入式实景互动体验VR创新应用的重构
+        	\item 主导JHipster和SDL(OData)解决方案集成的可行性研究和原型设计并满足工业化项目脚手架的需求
+        	\item 参与万宝盛华(Manpower)求职系统项目和道达尔(Total)航空燃油管理系统项目的售前工作：需求分析、提案、可行性研究、项目用时预估等
+        	\item 指导实习生的日常开发工作并提供专业相关的建议
+        	\item 技术：Node.js，Vue.js，A-Frame，JHipster，Spring Boot，Microservices, OData
+    	\end{itemize}
+        外派工作：
+        \begin{itemize}
+            \item 2018.10至2020.07，任首席开发工程师兼Scrum Master，@威立雅水务（法国）信息技术服务中心
+            \item 为水务网络设备管理系统做开发和维护的工作，面向全法4000余名水务工作者，其``GIS模块''涉及全法上千万水务设备的业务信息和地理位置信息，其``作业报告模块''管理着2千余万次设备维修或维护作业的数据
+            \item 领导3-4人的开发团队基于Scrum敏捷开发模式来推进开发和维护工作
+            \item 主导多个城市水务网络拓展项目的应用架构设计、开发、上线和后期维护工作
+            \item 主导多个模块中遗留代码的重构及业务逻辑的整合
+            \item 曾在威立雅全法信息系统重组的项目集里任应用技术负责人之一，协同其他多个团队推进项目并负责上线
+            \item 牵头制定开发准则和代码规范、指导团队成员、主持代码审查以保证开发质量
+            \item 牵头整理回归测试用例，基于JIRA制定可复用的测试流程并实现部分自动化
+            \item 积极推进团队的DevOps转型工作并参与Jenkins等相关自动化工具的部署和推广
+            \item 利用Jenkins+Bitbucket进行持续集成（构建和测试），在保证开发质量的基础上加快开发/测试进程
+            \item 参与服务器的运维工作
+            \item 参与网络安全性的加强
+            \item 语言：PHP，Js，Python，SQL，Bash，YAML，XML
+            \item 技术：AWS，Git，Oracle 11g，PostgreSQL，PostGIS，ArcGIS，QGIS，Jenkins，Docker，Ansible，Terraform，Jasmine，Protractor
+        \end{itemize}
+    	}
+        }
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twentyfluid}
+
+%----------------------------------------------------------------------------------------
+%    WORK EXPERIENCE continue
+%----------------------------------------------------------------------------------------
+\newgeometry{
+    left=1cm,
+    top=0.5cm,
+    right=1cm,
+    bottom=0.5cm,
+}
+\vspace{-0.2cm}
+
+\begin{twentyfluid}
+
+\twentyitemfluid
+    {2020.10 至今}
+    {博士后}
+    {\href{https://www.thss.tsinghua.edu.cn/index.htm}{清华大学软件学院}}
+    {\\ \klabel{云原生} \klabel{应用架构} \klabel{机器学习引擎}}
+    {
+    {
+    \vspace{-0.2cm}
+    \begin{itemize}
+        \item 主持云原生通用机器学习平台Anylearn的研发与维护工作，面向以清华大学软件学院为主的多个院系的科研师生提供服务，支撑清华大学《深度学习》研究生课程（百人规模）的教学任务
+        \item 语言：Python, Golang, GraphQL, JS, SQL
+        \item 技术：Kubernetes, kubebuilder, Flask, ElasticSearch/ECK/EFK, Prometheus, PostgreSQL, Redis, Vue.js
+    \end{itemize}
+    }
+    }
+
+\twentyitemfluid
+    	{2016.02 - 2017.01}
+        {助教}
+        {\href{http://www.utt.fr/}{特鲁瓦技术大学}}
+        {\\ \klabel{法语教学} \klabel{教学组织、设计、实施}}
+        {
+        {
+        \vspace{-0.2cm}
+        \begin{itemize}
+            \item 全法语授课：习题讲解、答疑、为学生提供信息专业相关的指导意见
+        	\item 助理教学图论和算法的课程，约25人的小班课，34课时$\times$2学期
+        	\item 曾主讲图论及相关算法在软件领域的应用经验（约80人的大课，2课时$\times$2学期）
+        	\item 参与大作业项目的设计、跟踪并指导学生完成作业及批改评分
+        	\item 参与考试试题设计和批改
+        \end{itemize}
+        }
+        }
+
+\twentyitemfluid
+        {2014.03 - 2014.12}
+        {信息技术工程师}
+        {\href{https://www.ville-troyes.fr/}{特鲁瓦市政府}}
+        {\\ \klabel{算法设计} \klabel{应用架构} \klabel{地理信息系统}}
+        {
+        {
+        \vspace{-0.2cm}
+        \begin{itemize}
+            \item 设计特鲁瓦城市道路改道系统，并以网络应用的形式开发初版原型
+            \item 基于 \textit{OpenStreetMap} 地理位置信息系统获取城市路网数据
+            \item 利用TileMill生成地图瓦片用于地图显示、利用Leaflet.js开发可交互的地图界面
+            \item 基于图最短路径、图广度优先搜索等基础算法，设计并实现改道计算算法
+            \item 语言：PHP，Js，CSS，Java，SQL
+            \item 技术：Laravel4, SQLite, Leaflet.js, Tilemill+CartoCSS, jQuery, Bootstrap3
+        \end{itemize}
+        }
+        }
+
+\twentyitemfluid
+   		{2012.07 - 2012.12}
+        {PHP开发（实习）工程师}
+        {\href{https://www.betadvisor.com/}{BetAdvisor}}
+        {\\ \klabel{开发框架应用} \klabel{数据库}}
+        {
+        \vspace{-0.2cm}
+        \begin{itemize}
+        	\item 主导开发站内搜索引擎、参与维护用户界面和后台管理界面
+        	\item 主导开发KPI统计系统（包括计算和图表），为公司优化营销策略提供量化指标，帮助公司转亏为盈
+        	\item 技术：PHP Symfony1, MySQL, Zend Lucene, jQuery
+    	\end{itemize}
+    	}
+
+\end{twentyfluid}
+
+%----------------------------------------------------------------------------------------
+%	 PROJECT EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{-0.2cm}
+\section{项目经历}
+
+\begin{twentyfluid}
+
+    \twentyitemfluid
+   		{2017.02 - 2018.5}
+        {ODS}
+        {\href{https://www.ville-troyes.fr/}{特鲁瓦市政府}}
+        {\\ \klabel{算法设计} \klabel{软件工程} \klabel{开发团队建设}}
+        {
+        {
+        \vspace{-0.2cm}
+        \begin{itemize}
+        	\item 主持特鲁瓦城市道路改道系统正式版的设计、架构和开发，并部署测试环境，交付市政验收（基于上述2014年工作）
+        	\item 领导3人开发团队基于Scrum的敏捷开发模式来推进项目、主持各类阶段性会议、与各项目干系人协作
+        	\item 制定开发准则和代码规范、指导团队成员、主持code review，以保证代码质量
+        	\item 利用GitLab-CI进行持续集成（构建和测试），在保证质量的基础上加快开发/测试进程
+            \item 主导后端Web Services的开发、参与部分前端功能开发
+            \item 扩展原型改道计算算法，在原有``最短路途目标''基础上增加更多指标，并提高算法的扩展性，方便未来增加更多指标
+        	\item Spring Boot, Hibernate, Docker, Maven, H2 Database, Vue.js
+    	\end{itemize}}
+        }
+    
+    \twentyitemfluid
+    	{2016.04 - 2017.03}
+        {VoiceApp}
+        {春晖杯创新创业大赛法国赛区}
+        {\\ \klabel{业务架构} \klabel{应用架构} \klabel{DevOps}}
+        {
+        {
+        \vspace{-0.2cm}
+        \begin{itemize}
+        	\item 设计并开发以共同观看在线短视频来促进陌生人实时语音社交的移动应用
+            \item 主持3人开发小组进行应用的开发、测试和上线（Google Play Store）
+            \item 主导安卓应用架构设计
+            \item 主导开发和调试视频播放模块、应用内实时语音模块和用户界面
+            \item 利用GitLab-CI进行持续集成（构建和测试），在保证质量的基础上加快开发/测试进程
+            \item 技术：Retrofit2, RxAndroid, Glide, Butterknife, JUnit4, Mockito, Docker
+        \end{itemize}}
+        }
+
+\end{twentyfluid}
+
+%----------------------------------------------------------------------------------------
+%	 PUBLICATION
+%----------------------------------------------------------------------------------------
+\vspace{-0.2cm}
+\section{学术成果}
+
+\vspace{-0.2cm}
+\subsection{期刊论文}
+\begin{itemize}
+    \item Y. Huang, A.C. Santos, C. Duhamel, \textit{Model and methods to address urban road network problems with disruptions}. International Transactions in Operational Research, 2019. DOI:10.1111/itor.12641
+    \item Y. Huang, A.C. Santos, C. Duhamel, \textit{Bi-objective methods for road network problems with disruptions}. Journal of the Operational Research Society. 2019. DOI:10.1080/01605682.2019.1639479
+\end{itemize}
+
+\vspace{-0.1cm}
+\subsection{会议论文与摘要}
+\begin{itemize}
+    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Methods for solving road network problems with disruptions}. Electronic Notes in Discrete Mathematics, 64, pp. 175--184, 2018.
+    \item $[$全法会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Heuristiques pour le problème de reconfiguration des réseaux urbains suite à des interruptions routières}, in: \textit{Actes du 19ème congrès de la société Française de Recherche Opérationnelle et d'Aide à la Décision (ROADEF)}. 2p. Lorient, France, 2018.
+    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Managing disruptions in urban road networks for real contexts}, in: \textit{6th INFORMS Transportation Science and Logistics Society Workshop}, Hong Kong, China, 2018.
+    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Managing predictable and unpredictable disruptions on road networks}, in: \textit{Int'l Conference on Intelligent Transportation Engineering and Smart City (ITESC)}, Guilin, China, 2017.
+    \item $[$国际会议$]$ C. Duhamel, A.C. Santos, Y. Huang, \textit{Adapting flow constraints to handle urban network design problems}, in: \textit{Proceedings of the International Network Optimization Conference (INOC 17)}, 10p. Lisbonne, Portugal, 2017.
+    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Disruptions management in multidirectional road networks}, in: \textit{Proceedings of the 9th Triennial Symposium on Transportation Analysis (TRISTAN 16)}, 4p., Oranjestad, Aruba, 2016.
+    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{A bi-objective model to address disruptions on unidirectional road networks}, in: \textit{Proceedings of the 8th IFAC Conference on Manufacturing Modelling, Management and Control (MIM2016)}, 12 \textbf{49}, Troyes, France, pp. 1620--1625, 2016.
+    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Heuristics for the bi-objective Unidirectional Road Network Design Problem with Disruptions}, in: \textit{Annual workshop of the EURO working group on Vehicle Routing and Logistics optimization (VeRoLog)}, p140, Nantes, France, 2016.
+\end{itemize}
+
+\vspace{-0.1cm}
+\subsection{译著}
+\begin{itemize}
+    \item 《青少年项目奇遇系列. 3， 妙趣横生的科技节项目》, 王逸鹤、黄亦芃译, ISBN: 987-7-5198-5877-3, 2021.9.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%    COMPETITIONS
+%----------------------------------------------------------------------------------------
+\vspace{-0.1cm}
+\section{参赛情况}
+\vspace{-0.1cm}
+\begin{itemize}
+    \item 2017年欧洲智慧城市创新大赛``出行''方向第二名（项目：Tactical Optimization Strategies to Adapt Urban Transportation Networks（TOAST））
+    \item 2016年``春晖杯''创新创业大赛法国赛区团体一等奖第一名（项目：VoiceApp，详见2016-2017年项目经验）
+    \item 2016年TRA-vision交通大赛第13名（项目：Système d'aide à la décision ODS (Optimal traffic Deviation System)）
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%    ASSOCIATIONS
+%----------------------------------------------------------------------------------------
+\vspace{-0.1cm}
+\section{社团活动}
+
+\begin{twentyfluid}
+
+    \twentyitemfluid
+        {2017.09 - 2018.07}
+        {}
+        {\href{}{特鲁瓦（法国）中国学生学者联合会 - \textbf{主席}}}
+        {}
+        {
+        {
+        \vspace{-0.3cm}
+        \begin{itemize}
+            \item 配合中国驻法大使馆教育处来帮助在特鲁瓦的中国学生的留学生活
+            \item 牵头组织中法学生文化交流活动，包括端午节、中秋节、中国书法等等
+            \item 领导面向在特鲁瓦的中国留学生的迎新和户外烧烤活动
+            \item 主导与学校官方留学生/交换生组织的合作
+            \item 主导新成员招募和培训工作
+        \end{itemize}}
+        }
+
+    \twentyitemfluid
+        {2013.10 - 2017.09}
+        {}
+        {\href{}{特鲁瓦（法国）中国学生学者联合会 - \textbf{活动部部长}}}
+        {}
+        {
+        {
+        \vspace{-0.3cm}
+        \begin{itemize}
+            \item 牵头创办面向留学生的《特鲁瓦生活攻略》，汇集各类在法生活信息
+            \item 主导创办篮球联赛
+            \item 负责各类迎新、踏青、春节联欢等活动的组织和采购
+            \item 在安全事件发生后协助驻法使馆教育处老师安抚同学并组织开展安全讲座
+        \end{itemize}}
+        }
+
+\end{twentyfluid}
+
+\end{document} 
