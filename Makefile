@@ -6,7 +6,7 @@ all: pdf
 	@echo "Done!"
 pdf: *.tex
 	@echo "Building.... $^ into $(outdir)/"
-	@$(foreach var,$(files_tex),xelatex -interaction=nonstopmode -output-directory='$(outdir)' '$(var)' 1>/dev/null || true)
+	@$(foreach var,$(files_tex),xelatex -interaction=nonstopmode -output-directory='$(outdir)' '$(var)' || true)
 clean:
 	@rm -f $(outdir)/*.aux $(outdir)/*.dvi $(outdir)/*.log $(outdir)/*.out $(outdir)/*.pdf $(outdir)/*.bak
 	@echo "Clean done.";

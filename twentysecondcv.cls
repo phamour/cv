@@ -216,7 +216,7 @@
             \cvnumberphone \\
       }
       \ifthenelse{\equal{\cvmail}{}}{}{
-            电邮：
+            邮箱：
             &
             \href{mailto:\cvmail}{\cvmail} \\
       }
@@ -237,22 +237,28 @@
         
         \skills
         
-        PHP \textbullet{} Java \textbullet{} C/C++ \textbullet{} PL/SQL \\
-        Python \textbullet{} Node.js \textbullet{} Bash \\
+        Linux \textbullet{} MacOS \textbullet{} Windows \\
+        Python \textbullet{} Java \textbullet{} C/C++ \textbullet{} PHP \textbullet{} Golang \\
+        JavaScript \& Node.js \textbullet{} Bash \textbullet{} PL/SQL \\
         GraphQL \textbullet{} JSON \textbullet{} YAML \textbullet{} XML \\
         Maven \textbullet{} Gradle \textbullet{} Webpack \textbullet{} Gulp.js \\
-        Linux \textbullet{} Git \textbullet{} Docker \textbullet{} DevOps \textbullet{} FinOps \\
-        GitLab-ci \textbullet{} Jenkins \textbullet{} Jira \\
-        移动应用开发 \textbullet{} 测试 \textbullet{} 运维 \textbullet{} 云计算 \\
-        线性规划 \textbullet{} 启发式算法 \textbullet{} 元启发式算法 \\
-        
+        GitHub Actions \textbullet{} GitLab-ci \textbullet{} Jenkins \\
+        运筹优化 \textbullet{} 启发式算法 \textbullet{} 元启发式算法 \\
+
     %------------------------------------------------
-    \vspace{-0.2cm}
+    \vspace{-0.3cm}
+    \profilesection{专业认证}{3cm}
+    \begin{itemize}
+      \item \textbf{Certified Kubernetes Administrator}
+      \item 法语高级水平证书（\textbf{DALF}）C1等级
+    \end{itemize}
+
+    %------------------------------------------------
     \profilesection{语言能力}{3cm} 
     \begin{figure}
       \renewcommand{\arraystretch}{0.8}
-      $\vcenter{\hbox{\includegraphics[scale=0.25]{assets/images/english.png}}}$ $\vcenter{\hbox{英语流利（BULATS C1）}}$ \\
-      $\vcenter{\hbox{\includegraphics[scale=0.25]{assets/images/french.png}}}$ $\vcenter{\hbox{法语流利（DALF C1）}}$ \\
+      $\vcenter{\hbox{\includegraphics[scale=0.25]{assets/images/english.png}}}$ $\vcenter{\hbox{英语流利}}$ \hspace{0.2cm}
+      $\vcenter{\hbox{\includegraphics[scale=0.25]{assets/images/french.png}}}$ $\vcenter{\hbox{法语流利}}$ \\
 		\end{figure}
 		
 		%------------------------------------------------
