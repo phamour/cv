@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build
         run: |
-          bash -c build-in-docker.sh
+          bash build-in-docker.sh
           cp -a ./build/main.pdf ./build/cv-yipeng-huang.pdf
       - name: Upload Release Asset
         id: upload-release-asset 
