@@ -1,0 +1,27 @@
+name: ReleasePDF
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    name: Build PDF and upload as release assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build
+        run: |
+          bash -c build-in-docker.sh
+          cp -a ./build/main.pdf ./build/cv-yipeng-huang.pdf
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./build/cv-yipeng-huang.pdf
+          asset_name: cv-yipeng-huang.pdf
+          asset_content_type: application/pdf
