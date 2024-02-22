@@ -89,18 +89,18 @@
         {特鲁瓦, 法国}
         {\textbullet{} 专业方向：软件工程 \\
         \textbullet{} 专业课程：C语言，算法设计，信息系统设计，Web编程，Java，设计模式，图论，Linux，PL/SQL，Web Services，软件质量管理\vspace{0.3cm}}
-    \twentyitem
-        {2008.08 - \\ 2009.02}
-        {法国工程师项目法语培训}
-        {\href{http://www.cscdf.org/}{留学基金委-东方国际教育交流中心}}
-        {北京, 中国}
-        {\vspace{-0.3cm}}
-    \twentyitem
-        {2005.09 - \\ 2008.07}
-        {高中学历}
-        {\href{https://baike.baidu.com/item/首都师范大学附属中学}{首都师范大学附属中学}}
-        {北京, 中国}
-        {\vspace{-0.6cm}}
+    % \twentyitem
+    %     {2008.08 - \\ 2009.02}
+    %     {法国工程师项目法语培训}
+    %     {\href{http://www.cscdf.org/}{留学基金委-东方国际教育交流中心}}
+    %     {北京, 中国}
+    %     {\vspace{-0.3cm}}
+    % \twentyitem
+    %     {2005.09 - \\ 2008.07}
+    %     {高中学历}
+    %     {\href{https://baike.baidu.com/item/首都师范大学附属中学}{首都师范大学附属中学}}
+    %     {北京, 中国}
+    %     {\vspace{-0.6cm}}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
 
@@ -121,38 +121,46 @@
     {
     \vspace{-0.2cm}
     \begin{itemize}
-        \item 主持\textbf{大数据机器学习研发管理系统Anylearn}的研发工作
+        \item 主持\textbf{大数据机器学习研发管理系统Anylearn}的研发工作，领导3-7人的研发团队
         \begin{itemize}
-            \item 面向以清华大学软件学院为主的多个院系的科研师生提供服务
-            \item 支撑清华大学软件学院与大数据国家工程研究中心的\textbf{北京冬奥风速预测}、\textbf{雷达回波外推}、气象卫星降水预测、制造任务智能调度等重点科研项目
-            \item 支撑多次清华大学《深度学习》、《人工智能导论》、《大数据基础》等课程的教学
-            \item 累计为几百位用户的近7千个算法版本提供超4万次/25万小时的训练服务
+            \item 支撑基于雷达回波外推的极端降水短临预报大模型研发
+            \begin{itemize}
+                \item \textbf{成果发表于《Nature》正刊}
+            \end{itemize}
+            \item 支持基于全球气象自动站协同预报的风速预测大模型研发
+            \begin{itemize}
+                \item \textbf{成果发表于《Nature Machine Intelligence》并落地服务2022北京冬奥}
+            \end{itemize}
+            \item 支撑大飞机装配脉动生产线智能调度模型研发
+            \begin{itemize}
+                \item \textbf{成果发表于《中国科学：信息科学》}
+            \end{itemize}
+            \item 支撑《深度学习》、《人工智能导论》、《大数据基础》等清华大学课程的教学工作
+            \item 累计为用户提供超7万次、42万小时的模型训练服务
+            \item 累计管理超1万份用户算法以及超220TB的数据集和模型资产
         \end{itemize}
-        \item 领导3-7人的研发团队
     \end{itemize}
     架构方面：
     \vspace{-0.1cm}
     \begin{itemize}
         \item 主导设计了系统架构，满足集群化的算力管理需求以及集约式的资产管理需求
         \item 主导设计了基于云原生应用范式、以Operator为核心的技术架构
-        \item 主导设计了生产环境高可用GPU集群（3+12节点）的部署架构并主持建设工作
+        \item 主导设计了生产环境高可用GPU集群（24节点）的部署架构并主持建设工作
     \end{itemize}
     开发方面：
     \vspace{-0.1cm}
     \begin{itemize}
-        \item 主导设计和实现了平台的Helm Charts快速部署模式
-        \item 主导设计和开发了基于Gitea的机器学习算法版本管理、基于GraphQL的后端APIv2、基于NNI的自动超参数调优、基于Kaniko的自定义镜像构建等功能模块
-        \item 主导设计和开发了平台的Python SDK和命令行工具
-        \item 主导了基于GitHub Actions的CI流水线的实现
+        \item 主导设计和开发了云原生（Kubernetes）机器学习执行引擎
+        \item 主导设计和开发了基于Gitea的机器学习算法版本管理、基于GraphQL的后端APIv2、基于NNI的自动超参数调优等功能模块
+        \item 主导设计和开发了平台的Python SDK和命令行客户端
+        \item 主导实现了基于JuiceFS的分布式文件存储和数据缓存
+        \item 主导实现了平台的Helm Charts快速部署模式
+        \item 主导实现了基于GitHub Actions的CI流水线
+        \item 指导了UI/UX全面焕新设计与开发
+        \item 指导了基于IoTDB端云协同的训练指标跟踪系统的设计与开发
+        \item 知道了基于Kaniko的自定义镜像构建系统的设计与开发
         \item 语言：Python, Golang, GraphQL, JavaScript, SQL
-        \item 技术：Kubernetes, Flask, ElasticSearch, Prometheus, PostgreSQL, Redis, Vue.js
-    \end{itemize}
-    平台事务方面：
-    \vspace{-0.1cm}
-    \begin{itemize}
-        \item 主持Anylearn在莆田学院的部署，支撑其大数据实训平台的人工智能板块
-        \item 主持多次推广、培训、技术支持等工作
-        \item 承担《深度学习》研究生课程助教（关于平台使用）并提供技术支持
+        \item 技术：Kubernetes, JuiceFS, ElasticSearch, Prometheus, PostgreSQL, Redis, IoTDB
     \end{itemize}
     团队方面：
     \vspace{-0.1cm}
@@ -168,6 +176,7 @@
         \item 科技部重点研发项目《灾害天气公里级智能网格预报系统及示范应用》子课题负责
         \item 科技部重点研发项目《工业智能软件敏捷开发理论与方法》参研
         \item 科技部重大项目《制造任务自适应感知与智能调度方法研究》课题参研
+        \item 工信部高质量专项《XXXX工业操作系统》课题参研
     \end{itemize}
     }
     }
@@ -196,7 +205,7 @@
     \\
     本部工作：
     \begin{itemize}
-        \item 主导浸入式实景互动体验VR创新应用的重构
+        \item 主导VR沉浸实景互动体验创新应用的重构
         \item 主导JHipster和SDL(OData)解决方案集成的可行性研究和原型设计并满足工业化项目脚手架的需求
         \item 参与万宝盛华(Manpower)求职系统项目和道达尔(Total)航空燃油管理系统项目的售前工作：需求分析、提案、可行性研究、项目用时预估等
         \item 指导实习生的日常开发工作并提供专业相关的建议
@@ -331,19 +340,19 @@
 \vspace{-0.2cm}
 \subsection{期刊论文}
 \begin{itemize}
-    \item 王逸鹤, 黄亦芃, \textit{面向网络安全防御防护的大数据平台架构研究}. 信息安全研究, 2021, 01.
-    \item Y. Huang, A.C. Santos, C. Duhamel, \textit{Model and methods to address urban road network problems with disruptions}. International Transactions in Operational Research, 2019. DOI:10.1111/itor.12641
-    \item Y. Huang, A.C. Santos, C. Duhamel, \textit{Bi-objective methods for road network problems with disruptions}. Journal of the Operational Research Society. 2019. DOI:10.1080/01605682.2019.1639479
+    \item 王逸鹤, \textbf{黄亦芃}, \textit{面向网络安全防御防护的大数据平台架构研究}. 信息安全研究, 2021, 01.
+    \item \textbf{Y. Huang}, A.C. Santos, C. Duhamel, \textit{Model and methods to address urban road network problems with disruptions}. International Transactions in Operational Research, 2019. DOI:10.1111/itor.12641
+    \item \textbf{Y. Huang}, A.C. Santos, C. Duhamel, \textit{Bi-objective methods for road network problems with disruptions}. Journal of the Operational Research Society. 2019. DOI:10.1080/01605682.2019.1639479
 \end{itemize}
 
 \vspace{-0.1cm}
 \subsection{会议论文与摘要}
 \begin{itemize}
-    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Methods for solving road network problems with disruptions}. Electronic Notes in Discrete Mathematics, 64, pp. 175--184, 2018.
-    \item $[$全法会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Heuristiques pour le problème de reconfiguration des réseaux urbains suite à des interruptions routières}, in: \textit{Actes du 19ème congrès de la société Française de Recherche Opérationnelle et d'Aide à la Décision (ROADEF)}. 2p. Lorient, France, 2018.
-    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Managing disruptions in urban road networks for real contexts}, in: \textit{6th INFORMS Transportation Science and Logistics Society Workshop}, Hong Kong, China, 2018.
-    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{Disruptions management in multidirectional road networks}, in: \textit{Proceedings of the 9th Triennial Symposium on Transportation Analysis (TRISTAN 16)}, 4p., Oranjestad, Aruba, 2016.
-    \item $[$国际会议$]$ Y. Huang, A.C. Santos, C. Duhamel, \textit{A bi-objective model to address disruptions on unidirectional road networks}, in: \textit{Proceedings of the 8th IFAC Conference on Manufacturing Modelling, Management and Control (MIM2016)}, 12 \textbf{49}, Troyes, France, pp. 1620--1625, 2016.
+    \item $[$国际会议$]$ \textbf{Y. Huang}, A.C. Santos, C. Duhamel, \textit{Methods for solving road network problems with disruptions}. Electronic Notes in Discrete Mathematics, 64, pp. 175--184, 2018.
+    \item $[$全法会议$]$ \textbf{Y. Huang}, A.C. Santos, C. Duhamel, \textit{Heuristiques pour le problème de reconfiguration des réseaux urbains suite à des interruptions routières}, in: \textit{Actes du 19ème congrès de la société Française de Recherche Opérationnelle et d'Aide à la Décision (ROADEF)}. 2p. Lorient, France, 2018.
+    \item $[$国际会议$]$ \textbf{Y. Huang}, A.C. Santos, C. Duhamel, \textit{Managing disruptions in urban road networks for real contexts}, in: \textit{6th INFORMS Transportation Science and Logistics Society Workshop}, Hong Kong, China, 2018.
+    \item $[$国际会议$]$ \textbf{Y. Huang}, A.C. Santos, C. Duhamel, \textit{Disruptions management in multidirectional road networks}, in: \textit{Proceedings of the 9th Triennial Symposium on Transportation Analysis (TRISTAN 16)}, 4p., Oranjestad, Aruba, 2016.
+    \item $[$国际会议$]$ \textbf{Y. Huang}, A.C. Santos, C. Duhamel, \textit{A bi-objective model to address disruptions on unidirectional road networks}, in: \textit{Proceedings of the 8th IFAC Conference on Manufacturing Modelling, Management and Control (MIM2016)}, 12 \textbf{49}, Troyes, France, pp. 1620--1625, 2016.
 \end{itemize}
 
 \vspace{-0.1cm}
@@ -356,7 +365,7 @@
 \vspace{-0.1cm}
 \subsection{译著}
 \begin{itemize}
-    \item 《青少年项目奇遇系列. 3， 妙趣横生的科技节项目》, 王逸鹤、黄亦芃译, ISBN: 987-7-5198-5877-3, 2021.9.
+    \item 《青少年项目奇遇系列. 3， 妙趣横生的科技节项目》, 王逸鹤、\textbf{黄亦芃}译, ISBN: 987-7-5198-5877-3, 2021.9.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
